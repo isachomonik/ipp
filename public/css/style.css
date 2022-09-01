@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: white; */
+    margin-bottom: 20px;
+}
+
+form h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.passBox h3 {
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+div#container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background: rgba(0,0,0,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 5%;
+
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/197/426/original/dark-background-with-green-topographic-contour-map-vector.jpg) ;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
