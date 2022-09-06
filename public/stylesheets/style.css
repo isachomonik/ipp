@@ -13,7 +13,7 @@
     width: 70px;
     height: 70px;
     position: absolute;
-    bottom: 175px;
+    bottom: 190px;
 }
 
 .logo img {
@@ -89,7 +89,7 @@ div.buttons {
      padding-left: 2%;
      padding-right: 2%;
      position: absolute;
-     top: 480px;
+     top: 490px;
      width: 225px;
      height: 75px;
      z-index: 1;
