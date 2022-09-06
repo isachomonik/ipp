@@ -3,7 +3,23 @@
     padding: 0;
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: aliceblue;
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 175px;
+}
 
+.logo img {
+    width: 60px;
+    height: 60px;
+}
 
 #container form {
     display: flex;
@@ -11,23 +27,72 @@
     justify-content: center;
     flex-direction: column;
     /* background-color: white; */
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    z-index: 2;
 }
 
 form h3 {
+    font-size: 30px;
     text-align: center;
     margin-bottom: 10px;
     color: white;
+    /* width: 50px; */
 }
 
-.passBox h3 {
-    margin-top: 10px;
+form input {
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
 }
 
-.buttons {
+/* .rememberCPF {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.subButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.subButtons a + label {
+    font-size: 10px;
+
+} */
+
+button {
+    width: 225px;
+    border-radius: 50px;
+    height: 30px;
+    position: absolute;
+    bottom: 22.5px;
+    background-color: #0872EF;
+    border: none;
+    color: #ffff;
+    /* margin: 0, 5%, 0, 5%; */
+}
+
+div.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 0 30px 30px;
+    background: rgba(0,0,0,0.5);
+     -webkit-backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px);
+     padding-left: 2%;
+     padding-right: 2%;
+     position: absolute;
+     top: 480px;
+     width: 225px;
+     height: 75px;
+     z-index: 1;
 }
 
 
@@ -36,17 +101,20 @@ div#container {
    align-items: center;
    justify-content: center;
    flex-direction: column;
+   border-radius: 30px;
    background: rgba(0,0,0,0.5);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     padding: 5%;
+    z-index: 2;
 
 }
+
 
 main {
     width: 100vw;
     height: 100vh;
-    background-image: url("/images/dark-background-with-green-topographic-contour-map-vector.jpg");
+    background-image: url("/images/macos-monterey-stock-green-dark-mode-layers-5k-5120x2880-5890-3472489213.jpeg");
     background-size: cover;
     display: flex;
     justify-content: center;
