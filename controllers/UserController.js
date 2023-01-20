@@ -20,8 +20,6 @@ const UserController = {
       cpf: data.cpf,
     };
 
-    console.log(novoUsuario);
-    console.log("teste");
 
     try {
       usuarios.push(novoUsuario);

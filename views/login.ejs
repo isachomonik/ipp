@@ -17,7 +17,7 @@
           <div class="logo">
           <img src="/images/Asset 1.png" alt="">
           </div>
-            <form method="post" action="/login">
+            <form id="login" method="post" action="/login">
               <div class="userBox">
                 <h3>CPF</h3>
                 <div>
@@ -32,21 +32,21 @@
                 </div>
               </div>
               
-              
-              <div class="buttons">
-                <button type="submit" class="userBox">Login</button>
+              <div class="subButtons">
+                <div class="rememberCPF">
+                  <input type="checkbox" name="rememberCPF" id="rememberCPF">
+                  <label for="rememberCPF">Lembrar CPF</label>
+                  
+                </div>
+                <a href="/cadastrar">Não sou cadastrado</a>
               </div>
+              
             </form>
-            <div class="subButtons">
-            <div class="rememberCPF">
-              <input type="checkbox" name="rememberCPF" id="rememberCPF">
-              <label for="rememberCPF">Lembrar CPF</label>
-
-            </div>
-            <a href="/cadastrar">Não sou cadastrado</a>
+            
           </div>
-          
-        </div>
+          <div class="buttons">
+            <button onclick="document.getElementById('login').submit()" class="userBox">Login</button>
+          </div>
       </main>
     
   </body>

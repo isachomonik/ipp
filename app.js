@@ -13,7 +13,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 app.use(session({
-  secret: 'your-secret-key',
+  secret: 'biscoito',
   resave: false,
   saveUninitialized: true
 }));
