@@ -1,17 +1,8 @@
 [
     {
-        "id": "3c1m5cxld4xi81n",
+        "id": "3c1vbnhld69y8y5",
         "nome": "Isac Homonik",
-        "cpf": "44662069882"
-    },
-    {
-        "id": "3c1m715ld4ya13l",
-        "nome": "marcelo",
-        "cpf": "123123123"
-    },
-    {
-        "id": "3c1m715ld4zo13k",
-        "nome": "Pedro",
-        "cpf": "142142142"
+        "cpf": "446.620.698-82",
+        "admin": false
     }
 ]

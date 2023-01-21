@@ -9,7 +9,9 @@ const IndexController = {
         } else {
             res.render('index', { user: {} });
         }
-    }
+    },
+
+    
 
 }
 
