@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Editando <%= user.nome %></h2>
+    <form action="/admin/edit-user/<%= user.id %>" method="POST">
+        <label>Nome:</label>
+        <input type="text" name="nome" value="<%= user.nome %>" required>
+        
+        <label>CPF:</label>
+        <input type="text" name="cpf" value="<%= user.cpf %>" required>
+
+        <label>Admin:</label>
+        <input type="checkbox" id="admin" name="admin" <%= user.admin ? 'checked' : user.admin=true %>>
+      
+        <input type="submit" value="Save Changes">
+      </form>
+
+      <form action="/admin/delete-user/<%= user.id %>" method="POST">
+        <input type="submit" value="Delete User">
+      </form>
+      
+</body>
+</html>

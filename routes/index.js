@@ -1,17 +1,21 @@
 var express = require('express');
+const AdminController = require('../controllers/AdminController');
 const IndexController  = require('../controllers/IndexController');
-const UserController = require('../controllers/UserController');
+const UserController = require('../controllers/UserController')
+const checkAdmin = require('../middlewares/checkAdmin');
 const checkAuth = require('../middlewares/checkAuth');
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', checkAuth, IndexController.showIndex);
 
-router.get('/login', UserController.showLogin);
-router.get('/cadastrar', UserController.showCadastro);
+// router.get('/admin', checkAdmin, AdminController.showAdmin)
 
-router.post('/cadastrar', UserController.cadastro)
+router.get('/login', UserController.showLogin);
 router.post('/login', UserController.login)
+
+
+
 
 
 module.exports = router;

@@ -5,18 +5,25 @@ const checkAdmin = require('../middlewares/checkAdmin');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', checkAdmin, AdminController.showAdmin );
 
-router.put('/users/:id/edit', checkAdmin, AdminController.edit);
-router.delete('/users/:id/delete', checkAdmin, AdminController.delete);
+router.put('/edit/:id', checkAdmin, AdminController.edit);
+router.delete('/delete/:id', checkAdmin, AdminController.delete);
+
+router.get('/user', AdminController.showUser);
+router.post('/edit-user/:id', AdminController.edit);
+router.post('/delete-user/:id', AdminController.delete);
+
+
+
+
 
 
 router.get('/cadastrar', UserController.showCadastro);
 
 
 router.post('/cadastrar', UserController.cadastro)
+router.post('/login', UserController.login)
 
 
 module.exports = router;

@@ -7,7 +7,47 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Editar Usuario</h2>
-    <form method="put" action=""></form>
+    <h2>Procurar Usuario</h2>
+    <form method="get" action="/admin/user/">
+        <label for="search"></label>
+        <input type="text" name="search" id="search">
+        <button type="submit">Procurar CPF</button>
+    </form>
+
+    <h2>Novo Usuario</h2>
+    <form method="post" action="/users/cadastrar">
+        <div class="userBox">
+          <h3>Nome</h3>
+          <div>
+            <label for="username" class="userBox">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Digite seu nome completo"
+              />
+            </label>
+          </div>
+          <h3>CPF</h3>
+          <div>
+            <label for="cpf" class="userBox">
+              <input
+                type="text"
+                name="cpf"
+                id="cpf"
+                placeholder="Digite seu CPF"
+              />
+
+            </label>
+          </div>
+        </div>
+        
+    
+      </div>
+      <div class="buttons">
+        <button type="submit" class="userBox">Cadastrar</button>
+      </div>
+        
+      </form>
 </body>
 </html>

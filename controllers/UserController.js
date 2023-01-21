@@ -22,13 +22,20 @@ const UserController = {
       cpf: cpfValidator.format(data.cpf),
       admin: false
     };
+   
 
     if(cpfValidator.isValid(novoUsuario.cpf)){
       try {
         usuarios.push(novoUsuario);
         let caminho = path.resolve(__dirname + "/../database/usuarios.json");
         fs.writeFileSync(caminho, JSON.stringify(usuarios, null, 4));
+
+        if(req.session.user.admin == true){
+          res.redirect('/admin')
+        } else {
+
         res.redirect("/login");
+        }
       } catch (err) {
         console.error(err);
         res.send("There was an error processing your request");
@@ -55,28 +62,7 @@ const UserController = {
     }
   },
 
-  deleteUser: (req, res) => {
-
-  },
-
-  edit: (req, res) => {
-    var data = req.body;
-    let caminho = path.resolve(__dirname + "/../database/usuarios.json");
-    let usuarios = JSON.parse(fs.readFileSync(caminho));
-    let user = usuarios.find((user) => user.id === req.params.id);
-    if (!user) {
-      return res.status(404).send("User not found.");
-  }
-
-  // Allow the user to input new information
-  user.nome = req.body.name;
-  user.cpf = req.body.cpf;
   
-  // Save the updated information back to the database
-  fs.writeFileSync(path.resolve(__dirname + '/../database/usuarios.json'), JSON.stringify(usuarios, null, 4));
-
-  res.redirect("/users");
-  }
 };
 
 module.exports = UserController;

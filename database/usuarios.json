@@ -3,6 +3,18 @@
         "id": "3c1vbnhld69y8y5",
         "nome": "Isac Homonik",
         "cpf": "446.620.698-82",
+        "admin": true
+    },
+    {
+        "id": "3c1vmsyld6ee58s",
+        "nome": "Lilian Homonik",
+        "cpf": "277.565.658-78",
+        "admin": false
+    },
+    {
+        "id": "3c1vmy7ld6egigk",
+        "nome": "Carlos Prevato",
+        "cpf": "322.695.508-03",
         "admin": false
     }
 ]
