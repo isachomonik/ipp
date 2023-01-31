@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+  output   = "../ERD.md"
+  theme    = "default"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Membro {
+  id         String  @id @default(uuid())
+  nome       String
+  cpf        String  @unique
+  eleicao_id String?
+
+  Eleicao Eleicao[]
+  Votos   Votos[]
+  Cargos  Cargo[]
+
+  @@map("membros")
+}
+
+model Cargo {
+  id   String @id @default(uuid())
+  nome String
+
+  Eleicao Eleicao[]
+  membros Membro[]
+
+  @@map("cargos")
+}
+
+model Eleicao {
+  id       String   @id @default(uuid())
+  nome     String?
+  cargo_id String
+  date     DateTime
+
+  cargo Cargo @relation(fields: [cargo_id], references: [id])
+
+  membro Membro[]
+  Votos  Votos[]
+
+  @@unique([id])
+  @@map("eleicoes")
+}
+
+model Votos {
+  id String @id @default(uuid())
+
+  eleicao_id String
+  membro_id  String
+
+  eleicao Eleicao @relation(fields: [eleicao_id], references: [id])
+  Membro  Membro? @relation(fields: [membro_id], references: [id])
+
+  @@map("votos")
+}

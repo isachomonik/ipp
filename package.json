@@ -4,18 +4,22 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "start": "nodemon dist/server.js"
+    "dev:server": "ts-node-dev --respawn --transpile-only src/server.ts"
   },
   "repository": "https://github.com/isachomonik/ipp.git",
   "author": "Isac Homonik <dev.isachomonik@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^9.3.0",
     "@types/express": "^4.17.16",
     "@types/node": "^18.11.18",
-    "nodemon": "^2.0.20",
+    "prisma": "^4.9.0",
+    "prisma-erd-generator": "^1.2.5",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "@prisma/client": "4.9.0",
     "dotenv": "^16.0.3",
     "expo": "^47.0.13",
     "expo-cli": "^6.2.1",

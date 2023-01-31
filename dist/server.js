@@ -10,5 +10,5 @@ app.get('/', (req, res) => {
     res.send('Running bb hey');
 });
 app.listen(port, () => {
-    console.log(`[Server]: I am running at https://localhost:${port}`);
+    console.log(`[Server]: I am running at http://localhost:${port}`);
 });
