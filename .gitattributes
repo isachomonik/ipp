@@ -1,0 +1,5 @@
+server/* linguist-document=false
+server/* linguist-vendored
+
+web/* linguist-document=false
+web/* linguist-vendored
