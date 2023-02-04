@@ -13,13 +13,16 @@ export default {
     },
 
    async cadastro(req: Request, res: Response) {
-        const createUser = z.object({
-            nome: z.string(),
-            cpf: z.string(),
-            
-        });
 
-        const { nome, cpf } = createUser.parse(req.body);
+        
+       
+       const createUser = z.object({
+           nome: z.string(),
+           cpf: z.string(),
+           
+        });
+        
+        const { nome, cpf } = createUser.parse(req.body)
 
         await prisma.membro.create({
             data: {

@@ -17,10 +17,9 @@ datasource db {
 }
 
 model Membro {
-  id         String  @id @default(uuid())
-  nome       String
-  cpf        String  @unique
-  eleicao_id String?
+  id   String @id @default(uuid())
+  nome String
+  cpf  String @unique
 
   Eleicao Eleicao[]
   Votos   Votos[]

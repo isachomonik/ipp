@@ -5,7 +5,6 @@ erDiagram
     String id PK 
     String nome  
     String cpf  
-    String eleicao_id  "nullable"
     }
   
 
