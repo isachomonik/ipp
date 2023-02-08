@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@prisma/client": "4.9.0",
+    "cpf": "^2.0.1",
     "dotenv": "^16.0.3",
     "expo": "^47.0.13",
     "expo-cli": "^6.2.1",
